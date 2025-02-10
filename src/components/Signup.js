@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/Signup.css';
 
+const BASE_URL = "https://weather-app-backend-wwsj.onrender.com";
+
 function Signup() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -23,7 +25,7 @@ function Signup() {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', formData);
+      const response = await axios.post(`${BASE_URL}/api/auth/signup`, formData);
       console.log('Signup successful:', response.data);
       navigate('/login'); // Redirect to login page after successful signup
     } catch (err) {

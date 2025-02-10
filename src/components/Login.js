@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/Login.css';
 
+const BASE_URL = "https://weather-app-backend-wwsj.onrender.com";
+
+
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -14,7 +17,7 @@ function Login() {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { username, password });
+      const response = await axios.post(`${BASE_URL}/api/auth/login`, { username, password });
 
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
