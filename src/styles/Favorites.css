@@ -1,0 +1,45 @@
+.favorites-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .favorites-page h1 {
+    margin-top: 60px;  
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .favorites-page ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .favorites-page li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+  
+  .favorites-page li a {
+    text-decoration: none;
+    color: #ff7f50;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .favorites-page li button {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 1px; 
+  }
+  
+  .favorites-page li button:hover {
+    background-color: #ff7043;
+  }
