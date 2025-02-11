@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "https://weather-app-backend-wwsj.onrender.com";
+const BASE_URL = process.env.REACT_APP_API_URL;
 
 //GET api weather and forecast data
 export const fetchWeather = async (city, token) => {
