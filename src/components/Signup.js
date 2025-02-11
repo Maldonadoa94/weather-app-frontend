@@ -25,7 +25,7 @@ function Signup() {
     setError('');
 
     try {
-      const response = await axios.post(`${BASE_URL}/api/auth/signup`, formData);
+      const response = await axios.post(`${BASE_URL}/auth/signup`, formData);
       console.log('Signup successful:', response.data);
       navigate('/login'); // Redirect to login page after successful signup
     } catch (err) {
